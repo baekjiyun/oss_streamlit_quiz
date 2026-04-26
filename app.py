@@ -5,7 +5,7 @@ import random
 from pathlib import Path
 
 st.set_page_config(
-    page_title="일반 상식 퀴즈",
+    page_title="한국 영화/드라마 명대사 퀴즈",
     layout="centered",
     initial_sidebar_state="collapsed",
 )
@@ -137,8 +137,8 @@ def reset_quiz():
 
 st.markdown("""
 <div class="header-banner">
-  <h1>일반 상식 퀴즈</h1>
-  <p>과학 · 역사 · 지리 · 문화 — 나의 상식 수준을 테스트해보세요!</p>
+  <h1>한국 영화/드라마 명대사 퀴즈</h1>
+  <p>대사를 보고 어떤 작품인지 맞혀보세요!</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -208,7 +208,7 @@ else:
         st.markdown(f"""
 <div class="card">
   <h2>퀴즈 소개</h2>
-  <p>과학, 역사, 지리, 문화 등 다양한 분야의 <b>일반 상식</b> 문제를 풀어보세요!</p>
+  <p>한국 영화와 드라마 속 <b>명대사</b>를 보고 어떤 작품의 대사인지 맞혀보세요!</p>
   <ul>
     <li>총 <b>{total}문제</b> &nbsp;·&nbsp; 객관식 4지선다</li>
     <li>문제는 매번 <b>랜덤 순서</b>로 출제</li>
