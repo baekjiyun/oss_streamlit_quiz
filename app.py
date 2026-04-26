@@ -199,7 +199,13 @@ else:
                 del st.session_state[k]
             st.rerun()
 
+    was_cached = "quiz_data_loaded" in st.session_state
     quiz_data = load_quiz_data()
+    if not was_cached:
+        st.toast("데이터 최초 로드 (파일 읽음)", icon="📂")
+        st.session_state.quiz_data_loaded = True
+    else:
+        st.toast("캐시에서 불러옴 (파일 읽기 없음)", icon="⚡")
     total = len(quiz_data)
 
     # ── 시작 전 안내 ─────────────────────────────
